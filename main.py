@@ -1,3 +1,52 @@
+def reper(func):
+	def wrapper():
+		func()
+		print('он репер')
+	return wrapper
+
+def prichoska(func):
+	def wrapper():
+		func()
+		print('он лысый')
+	return wrapper
+
+def mauka(deco):
+	def wrapper():
+		deco()
+		print('он носит зелёную майку ')
+	return wrapper
+
+def shtani(deco):
+	def wrapper():
+		deco()
+		print('на нём штаны от  "Гуси" ')
+	return wrapper
+
+def zvet(deco):
+	def wrapper():
+		deco()
+		print('он чорный ')
+	return wrapper
+
+def vozrast(deco):
+	def wrapper():
+		deco()
+		print('ему 40 годиков ')
+	return wrapper
+
+
+@vozrast
+@zvet
+@shtani
+@prichoska
+@mauka
+@reper
+def Chelovek():
+	print('Это человек')
+
+
+Chelovek()
+
 
 
 
