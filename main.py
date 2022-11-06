@@ -1,99 +1,50 @@
-#def reper(func):
-#	def wrapper():
-#		func()
-#		print('он репер')
-#	return wrapper
+class Humen:
+  def __init__(self, name):
+    self.name = 'None'
+    self.age = 0
+    self.zarplata = 0
 
-#def prichoska(func):
-#	def wrapper():
-#		func()
-#		print('он лысый')
-#	return wrapper
-#
-#def mauka(deco):
-#	def wrapper():
-#		deco()
-#		print('он носит зелёную майку ')
-#	return wrapper
-#
-#def shtani(deco):
-#	def wrapper():
-#		deco()
-#		print('на нём штаны от  "Гуси" ')
-#	return wrapper
+  def zarplatata2(self):
+    self.zarplata += 0
+    print(self.name  , 'заробатывает',  self.zarplata , 'грн')
 
-#def zvet(deco):
-#	def wrapper():
-#		deco()
-#		print('он чорный ')
-#	return wrapper
-
-#def vozrast(deco):
-	#def wrapper():
-	#	deco()
-	#	print('ему 40 годиков ')
-	#return wrapper
-
-
-#@vozrast
-#@zvet
-#@shtani
-#prichoska
-#@mauka
-#@reper
-#def Chelovek():
-#	print('Это человек')
-
-
-#Chelovek()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def ask_age():
-  num1 = sign = num2 =''
-  sign = ''
-  num2 = ''
-  while num1 == '' or sign == '' or num2 == '':
-    try:
-      num1 = int(input('Input your number 1: '))	
-      num2 = int(input('Input your number 2: '))
-      sign = input('Input your sign:')
-      if sign == '+' or sign == '-' or sign == '*' or sign == '/':
-        print(num1,sign,num2)
-      else:
-        sign = ''
-        raise ValueError
-    except ValueError:
-      print('You need to write normal evaluation')
-
-    if sing == '-':
-        print(num1,sign,num2,'=',num1/num2)
-    if sing == '*':
-        print(num1,sign,num2,'=',num1*num2)
-    if sign == '+':
-      print(num1,sign,num2,'=',num1+num2)
-    elif sign == '/':
-      try:
-        print(num1,sign,num2,'=',num1/num2)
-      except:
-        print('This is division by zero!!!')
-    print('The end of program')
+  def zarplatata(self):
+    self.zarplata += 20
+    print(self.name  , 'заробатывает',  self.zarplata , 'грн')
     
+  
+
     
-      
-ask_age()
+class  Ychitel(Humen):
+  def __init__(self):
+    self.nastroienie = 'Хорошое настроение'
+    self.name = 'Тамара Петровна'
+    #self.age += 99
+    self.zarplata = 2000
+    
+  
+  def nastroienie1(self):
+    print('У', self.name , self.nastroienie )
+  
+  
+
+    
+class Ychenik(Humen):
+  def __init__(self):
+    self.odeda = 'Модноя'
+    self.name = 'Тарас'
+    #self.age += 13
+    self.zarplata = 20
+
+  
+  
+
+
+
+
+obj2 = Ychenik()
+obj2.zarplatata()
+
+obj = Ychitel()
+obj.zarplatata2()
+obj.nastroienie1()
