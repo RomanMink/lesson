@@ -67,7 +67,7 @@
 def ask_age():
   num1 = sign = num2 =''
   sign = ''
-  nm2 = ''
+  num2 = ''
   while num1 == '' or sign == '' or num2 == '':
     try:
       num1 = int(input('Input your number 1: '))	
@@ -81,6 +81,10 @@ def ask_age():
     except ValueError:
       print('You need to write normal evaluation')
 
+    if sing == '-':
+        print(num1,sign,num2,'=',num1/num2)
+    if sing == '*':
+        print(num1,sign,num2,'=',num1*num2)
     if sign == '+':
       print(num1,sign,num2,'=',num1+num2)
     elif sign == '/':
@@ -88,6 +92,8 @@ def ask_age():
         print(num1,sign,num2,'=',num1/num2)
       except:
         print('This is division by zero!!!')
-      print('The end of program')
-
+    print('The end of program')
+    
+    
+      
 ask_age()
